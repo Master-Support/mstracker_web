@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="/assets/css/output.css" rel="stylesheet">
     <title>MSTracker</title>
 </head>
-<body>
-    <h1>MSTracker</h1>
+<body class="bg-gray-100">
+    <div class="container-ms1 mx-auto mt-10">
+        <div class="bg-white p-8 rounded shadow-md">
+            <form class="ms-form" id="codms">
+                <h1 class="text-2xl font-bold mb-4">Seja Bem vindo ao MSTracker</h1>
+                <div class="mb-4">
+                    <input type="text" name="codObj" id="codObj" placeholder="AA123456785BR" required="required" class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div class="mb-4">
+                    <input type="text" name="nomeObj" id="nomeObj" placeholder="Digite o nome do Objeto enviado" required="required" class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <button type="submit" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Inserir Objeto</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
