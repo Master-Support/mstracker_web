@@ -16,4 +16,9 @@ var rotasEnvio = []Rota{
 		Metodo: http.MethodGet,
 		Funcao: controllers.CarregarTelaDeObjetos,
 	},
+	{
+		URI:    "/adicionar-encomendas",
+		Metodo: http.MethodPost,
+		Funcao: controllers.AdicionarEncomenda,
+	},
 }

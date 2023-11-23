@@ -27,23 +27,24 @@
   <div class="container mx-auto mt-8">
     <div class="max-w-md mx-auto bg-white p-8 rounded shadow-md">
       <h1 class="text-2xl font-semibold mb-4">Rastreamento de Objeto</h1>
-      <form>
+      <form id="formulario-cadastro-objeto">
         <div class="mb-4">
-          <label for="nomeObj" class="block text-sm font-semibold mb-2">Nome do Objeto:</label>
-          <input type="text" id="nomeObj" name="nomeObj" placeholder="Digite o nome do Objeto enviado"
-            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500">
+          <label class="block text-sm font-semibold mb-2">Código de Rastreio:</label>
+          <input type="text" id="codigoObjeto" name="codigoObjeto" placeholder="AA123456785BR" required="required"
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500">
         </div>
         <div class="mb-4">
-          <label for="codigoRastreio" class="block text-sm font-semibold mb-2">Código de Rastreio:</label>
-          <input type="text" id="codObj" name="codigoRastreio" placeholder="AA123456785BR"
-            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500">
+          <label class="block text-sm font-semibold mb-2">Nome do Objeto:</label>
+          <input type="text" id="nomeObjeto" name="nomeObjeto" placeholder="Digite o nome do Objeto enviado" required="required"
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500">
         </div>
         <button type="submit"
           class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Rastrear</button>
       </form>
     </div>
   </div>
-
+  <script src="./assets/js/jquery.js"></script>
+  <script src="./assets/js/envios.js"></script>
 </body>
 
 </html>
