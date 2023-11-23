@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,4 +23,56 @@
         </div>
     </div>
 </body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MStrack - Sistema de Rastreamento</title>
+  <!-- Incluindo o CSS do Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Menu superior -->
+  <nav class="bg-blue-500 p-4 text-white">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="text-2xl font-semibold">MStrack</div>
+      <ul class="flex space-x-4">
+        <li><a href="#" class="hover:underline">Página Inicial</a></li>
+        <li><a href="#" class="hover:underline">Sobre</a></li>
+        <li><a href="#" class="hover:underline">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <div class="container mx-auto mt-8">
+    <div class="max-w-md mx-auto bg-white p-8 rounded shadow-md">
+      <h1 class="text-2xl font-semibold mb-4">Rastreamento de Objeto</h1>
+      <form>
+        <div class="mb-4">
+          <label for="nomeObj" class="block text-sm font-semibold mb-2">Nome do Objeto:</label>
+          <input type="text" id="nomeObj" name="nomeObj" placeholder="Digite o nome do objeto"
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="codigoRastreio" class="block text-sm font-semibold mb-2">Código de Rastreio:</label>
+          <input type="text" id="codObj" name="codigoRastreio" placeholder="Digite o código de rastreio"
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500">
+        </div>
+        <button type="submit"
+          class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Rastrear</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+
 </html>
+s
