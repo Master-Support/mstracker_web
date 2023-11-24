@@ -21,4 +21,9 @@ var rotasEnvio = []Rota{
 		Metodo: http.MethodPost,
 		Funcao: controllers.AdicionarEncomenda,
 	},
+	{
+		URI:    "/vizualizar-encomendas",
+		Metodo: http.MethodGet,
+		Funcao: controllers.VizualizarEncomenda,
+	},
 }

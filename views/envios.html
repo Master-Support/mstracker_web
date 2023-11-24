@@ -7,6 +7,9 @@
   <title>MSTracker - Sistema de Rastreamento</title>
   <!-- Incluindo o CSS do Tailwind -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/js/jquery.js">
+  <link rel="stylesheet" href="./assets/js/envios.js">
+
 </head>
 
 <body class="bg-gray-100">
@@ -24,7 +27,7 @@
   </nav>
 
   <!-- Conteúdo principal -->
-  <div class="container mx-auto mt-8">
+  <div class="container mx-auto mt-8 flex 1">
     <div class="max-w-md mx-auto bg-white p-8 rounded shadow-md">
       <h1 class="text-2xl font-semibold mb-4">Rastreamento de Objeto</h1>
       <form id="formulario-cadastro-objeto">
@@ -38,13 +41,33 @@
           <input type="text" id="nomeObjeto" name="nomeObjeto" placeholder="Digite o nome do Objeto enviado" required="required"
           class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500">
         </div>
+        <a href="/encomendas"></a>
         <button type="submit"
           class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Rastrear</button>
       </form>
     </div>
   </div>
+<!-- Tabela -->
+<div class="container mx-auto my-8 flex-1">
+  <table id="envios-table" class="table-auto w-full border-collapse border">
+      <thead>
+          <tr>
+              <th class="border p-4 text-center align-middle">Nome do Objeto</th>
+              <th class="border p-4 text-center align-middle">Código do Objeto</th>
+              <th class="border p-4 text-center align-middle">Data Prevista de Entrega</th>
+              <th class="border p-4 text-center align-middle">Status do Objeto</th>
+              <th class="border p-4 text-center align-middle">Localização</th>
+          </tr>
+      </thead>
+      <tbody class="bg-gray-100">
+      </tbody>
+  </table>
+</div>
+ </div>
   <script src="./assets/js/jquery.js"></script>
   <script src="./assets/js/envios.js"></script>
+  <script src="./assets/js/vizualizar.js"></script>
+  
 </body>
 
 </html>

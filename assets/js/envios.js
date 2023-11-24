@@ -7,8 +7,8 @@ function rastrearObjeto(e) {
         url: "/adicionar-encomendas",
         method: "POST",
         data: {
-            "codigoObjeto": $('#nomeObjeto').val(),
-            "nomeObjeto": $('#codigoObjeto').val()
+            "nomeObjeto": $('#nomeObjeto').val(),
+            "codigoObjeto": $('#codigoObjeto').val()
         }
     });
 }
