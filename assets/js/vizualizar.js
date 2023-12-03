@@ -22,7 +22,7 @@ function carregarEnvios() {
 // Função para exibir os envios na tabela
 function exibirEnvios(envios) {
     var tbody = $('#envios-table tbody');
-    tbody.empty();er
+    tbody.empty();
 
     $.each(envios, function(index, envio) {
         var row = '<tr>';
