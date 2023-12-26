@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MSTracker - Cadastrar Objeto</title>
+  <!-- Adicione o link para o CDN do Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Estilos personalizados, se necessário */
+    .custom-button {
+      transition: background-color 0.3s ease-in-out;
+    }
+    .custom-button:hover {
+      background-color: #4b5563;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Barra de navegação -->
+  <nav class="bg-blue-500 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="text-3xl font-bold cursor-pointer">MSTracker</div>
+    </div>
+  </nav>
+
+  <div class="container mx-auto mt-8">
+    <!-- Área principal -->
+    <main class="w-full lg:w-3/4 bg-white rounded-lg shadow-md p-6 mx-auto">
+      <!-- Formulário para cadastrar objeto -->
+      <form id="objectForm" class="mb-4">
+        <input type="text" id="obejto" name="obejto" placeholder="Nome do objeto" class="border rounded-md px-3 py-2 w-full mb-4 focus:outline-none focus:border-blue-500" required>
+        <input type="text" id="codobjeto" name="codobjeto" placeholder="Código do objeto" class="border rounded-md px-3 py-2 w-full mb-4 focus:outline-none focus:border-blue-500" required>
+        <button type="submit" id="envio" class="custom-button bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:bg-blue-600 transition duration-300">Enviar</button>
+      </form>
+
+      <!-- Mensagem de envio feito com sucesso -->
+      <div id="successMessage" class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded-md mb-4">
+        Envio feito com sucesso!
+      </div>
+
+      <!-- Botão para voltar para a página principal -->
+      <a href="envios.html" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:bg-blue-600 transition duration-300">Voltar</a>
+    </main>
+  </div>
+
+  <script src="../assets/js/cadastro.js"></script>
+</body>
+</html>
