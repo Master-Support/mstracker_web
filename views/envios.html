@@ -5,7 +5,7 @@
   <title>MSTracker - Rastreamento dos Correios</title>
   <!-- Adicione o link para o CDN do Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/js/jquery.js">
+  <link rel="stylesheet" href="../assets/js/jquery.js">
 
 </head>
 <body class="bg-gray-100">
@@ -37,6 +37,25 @@
     </main>
   </div>
 
+  <!--Tabela-->
+  <div class="container mx-auto my-8 flex-1">
+    <table id="envios-table" class="table-auto w-full border-collapse border">
+        <thead>
+            <tr>
+                <th class="border p-4 text-center align-middle">Nome do Objeto</th>
+                <th class="border p-4 text-center align-middle">Código do Objeto</th>
+                <th class="border p-4 text-center align-middle">Data Prevista de Entrega</th>
+                <th class="border p-4 text-center align-middle">Status do Objeto</th>
+                <th class="border p-4 text-center align-middle">Localização</th>
+            </tr>
+        </thead>
+        <tbody class="bg-gray-100">
+        </tbody>
+    </table>
+  </div>
+   </div>
+
   <script src="../assets/js/enviosNovo.js"></script>
+  <script src="../assets/js/vizualizar.js"></script>
 </body>
 </html>
