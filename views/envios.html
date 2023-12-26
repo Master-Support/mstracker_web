@@ -1,74 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MSTracker - Sistema de Rastreamento</title>
-  <!-- Incluindo o CSS do Tailwind -->
+  <title>MSTracker - Rastreamento dos Correios</title>
+  <!-- Adicione o link para o CDN do Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/js/jquery.js">
-  <link rel="stylesheet" href="./assets/js/envios.js">
 
 </head>
-
 <body class="bg-gray-100">
-
-  <!-- Menu superior -->
-  <nav class="bg-blue-500 p-4 text-white">
+  <!-- Barra de navegação -->
+  <nav class="bg-blue-500 text-white py-4">
     <div class="container mx-auto flex justify-between items-center">
-      <div class="text-2xl font-semibold">MSTracker</div>
-      <ul class="flex space-x-4">
-        <li><a href="#" class="hover:underline">Página Inicial</a></li>
-        <li><a href="#" class="hover:underline">Sobre</a></li>
-        <li><a href="#" class="hover:underline">Contato</a></li>
-      </ul>
+      <div class="text-3xl font-bold cursor-pointer">MSTracker</div>
     </div>
   </nav>
 
-  <img src="assets/images/logo_mstarcker.svg" alt="">
-
-  <!-- Conteúdo principal -->
-  <div class="container mx-auto mt-8 flex 1">
-    <div class="max-w-md mx-auto bg-white p-8 rounded shadow-md">
-      <h1 class="text-2xl font-semibold mb-4">Rastreamento de Objeto</h1>
-      <form id="formulario-cadastro-objeto">
-        <div class="mb-4">
-          <label class="block text-sm font-semibold mb-2">Código de Rastreio:</label>
-          <input type="text" id="codigoObjeto" name="codigoObjeto" placeholder="AA123456785BR" required="required"
-          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500">
-        </div>
-        <div class="mb-4">
-          <label class="block text-sm font-semibold mb-2">Nome do Objeto:</label>
-          <input type="text" id="nomeObjeto" name="nomeObjeto" placeholder="Digite o nome do Objeto enviado" required="required"
-          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500">
-        </div>
-        <a href="/encomendas"></a>
-        <button type="submit"
-          class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Rastrear</button>
+  <div class="container mx-auto mt-8">
+    <!-- Área principal -->
+    <main class="w-full lg:w-3/4 bg-white rounded-lg shadow-md p-6 mx-auto">
+      <!-- Campo de inserção do código de rastreio -->
+      <form id="trackingForm" class="mb-4 flex items-center">
+        <input type="text" id="trackingCode" name="trackingCode" placeholder="Insira o código de rastreio" class="border rounded-md px-3 py-2 w-full focus:outline-none focus:border-blue-500" required>
+        <button type="submit" class="ml-2 custom-button bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:bg-blue-600 transition duration-300">Buscar</button>
+        <a href="cadastro.html" class="ml-2 custom-button bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:bg-blue-600 transition duration-300">Cadastrar Objeto</a>
       </form>
-    </div>
-  </div>
-<!-- Tabela -->
-<div class="container mx-auto my-8 flex-1">
-  <table id="envios-table" class="table-auto w-full border-collapse border">
-      <thead>
-          <tr>
-              <th class="border p-4 text-center align-middle">Nome do Objeto</th>
-              <th class="border p-4 text-center align-middle">Código do Objeto</th>
-              <th class="border p-4 text-center align-middle">Data Prevista de Entrega</th>
-              <th class="border p-4 text-center align-middle">Status do Objeto</th>
-              <th class="border p-4 text-center align-middle">Localização</th>
-          </tr>
-      </thead>
-      <tbody class="bg-gray-100">
-      </tbody>
-  </table>
-</div>
- </div>
-  <script src="./assets/js/jquery.js"></script>
-  <script src="./assets/js/envios.js"></script>
-  <script src="./assets/js/vizualizar.js"></script>
-</body>
 
+      <!-- Área para exibir as informações de rastreamento -->
+      <div id="trackingInfo" class="hidden">
+        <!-- Aqui serão inseridas as informações de rastreamento -->
+        <h2 class="text-lg font-semibold mb-2">Informações de Rastreamento:</h2>
+        <div id="report" class="border p-4 rounded-md">
+          <!-- As informações de rastreamento serão inseridas aqui -->
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/enviosNovo.js"></script>
+</body>
 </html>
